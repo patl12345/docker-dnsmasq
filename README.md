@@ -1,9 +1,9 @@
 # docker-dnsmasq
 
-dnsmasq in a docker container, configurable via a [simple web UI](https://github.com/jpillora/webproc)
+dnsmasq in a docker container, configurable via a [simple web UI] forked from (https://github.com/jpillora/webproc)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/jpillora/dnsmasq.svg)][dockerhub]
-[![Image Size](https://images.microbadger.com/badges/image/jpillora/dnsmasq.svg)][dockerhub]
+[![Docker Pulls](https://img.shields.io/docker/pulls/patl12345/dnsmasq.svg)][dockerhub]
+[![Image Size](https://images.microbadger.com/badges/image/patl12345/dnsmasq.svg)][dockerhub]
 
 ### Usage
 
@@ -35,6 +35,7 @@ dnsmasq in a docker container, configurable via a [simple web UI](https://github
    	-p 53:53/udp \
    	-p 5380:8080 \
    	-v /opt/dnsmasq.conf:/etc/dnsmasq.conf \
+	-v /opt/hosts:/tmp/hosts \
    	--log-opt "max-size=100m" \
    	-e "HTTP_USER=foo" \
    	-e "HTTP_PASS=bar" \
